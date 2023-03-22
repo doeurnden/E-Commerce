@@ -63,10 +63,24 @@
       </div>
     </div>
   </div>
-  <!-- <div class="footer">
-    <h2>Hello World</h2>
-    <h1>Den</h1>
-  </div> -->
+  <div class="footer">
+    <div class="left">
+      <div>Home</div>
+      <div><a href="#">Facebook</a></div>
+      <div>Category</div>
+      <div><a href="#">Instagam</a></div>
+      <div>Contact</div>
+      <div><a href="#">Tweeter</a></div>
+      <div>About</div>
+      <div><a href="#">Pinterest</a></div>
+    </div>
+    <div class="right">
+      <h2>Join our mailing list</h2>
+      <p>and get 10% off</p>
+      <button>Enter your email here</button><br>
+      <button>Suscribe now</button>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -111,7 +125,7 @@
   }
   .item{
     width: 100%;
-    height: 20rem;
+    /* height: 20rem; */
   }
   .item h1{
     text-align: center;
@@ -130,10 +144,31 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+    position:static;
   }
   .item .product div img{
     /* height: 50%; */
     width: 100%;
+  }
+  .footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+    height: 20rem;
+    background-color: rgb(124, 122, 122);
+  }
+  .footer .left{
+    width: 50%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  .footer .right{
+    width: 50%;
+    text-align: center;
+    align-items: center;
   }
 
 </style>
