@@ -63,6 +63,10 @@
       </div>
     </div>
   </div>
+  <div class="shop">
+    <button>Shopping All</button>
+    <button>></button>
+  </div>
   <div class="footer">
     <div class="left">
       <div>Home</div>
@@ -130,13 +134,15 @@
   .item h1{
     text-align: center;
   }
-  .item .product{
+  .product{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
     /* width: 30%; */
   }
-  .item .product div{
+  .product div{
     width: 100%;
     /* height: 50%; */
     background-color: rgb(174, 174, 174);
@@ -146,9 +152,13 @@
     /* align-items: center; */
     position:static;
   }
-  .item .product div img{
+  .product div img{
     /* height: 50%; */
     width: 100%;
+  }
+  .shop{
+    margin-top: 10px;
+    text-align: center;
   }
   .footer{
     display: flex;
