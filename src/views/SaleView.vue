@@ -1,6 +1,6 @@
 <template>
     <Navbar />
-    <h1>Hello From Contact Page</h1>
+    <h1>Hello From Sale Page</h1>
 </template>
 
 <script>

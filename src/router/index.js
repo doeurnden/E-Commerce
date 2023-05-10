@@ -10,16 +10,28 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/category',
-      name: 'category',
-      component: () => import('../views/CategoryView.vue')
+      path: '/shopAll',
+      name: 'shopAll',
+      component: () => import('../views/ShopAllView.vue')
+    },
+    {
+      path: '/women',
+      name: 'women',
+      component: () => import('../views/WomenView.vue')
+    },
+    {
+      path: '/men',
+      name: 'men',
+      component: () => import('../views/MenView.vue')
+    },
+    {
+      path: '/sale',
+      name: 'sale',
+      component: () => import('../views/SaleView.vue')
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
     {
@@ -28,15 +40,15 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue')
     },
     {
-      path: '/den',
-      name: 'den',
-      component: () => import('../views/HomeView.vue')
-    },
-    {
       path: '/login',
       name: 'login',
-      component: () => import('../views/Login.vue')
-    }
+      component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: () => import('../views/CartView.vue')
+    },
   ]
 })
 

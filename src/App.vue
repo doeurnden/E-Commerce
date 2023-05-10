@@ -1,27 +1,16 @@
 <template>
-  <div>
-    <Login @cancel="isLogin = false" v-if="isLogin"/>
-    <Index v-else @Login="isLogin = true"/>
-  </div>
+    <!-- <HomeView /> -->
+    <RouterView/>
 </template>
 
 <script>
-  import { RouterLink, RouterView } from 'vue-router'
-  import Index from "./views/Index.vue";
-  import Login from "./views/Login.vue";
-  export default {
-  data() {
-    return {
-      isLogin: false,
-    };
-  },
-  components: {
-    Index,
-    Login,
-  },
-};
+// import HomeView from './views/HomeView.vue';
+
+// export default {
+//     components: {
+//         HomeView
+//     }
+// }
 </script>
 
-<style scoped>
-  
-</style>
+<style lang="scss" scoped></style>
