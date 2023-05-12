@@ -77,6 +77,10 @@ nav {
     gap: 1rem;
     div a{
       text-decoration: none;
+      color: black;
+    }
+    :hover{
+      color: chocolate;
     }
 
     div:first-child {
