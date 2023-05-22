@@ -1,16 +1,16 @@
 <template>
     <header>
         <form>
-        <div>
-            <label>Email</label><br>
-            <input type="email" placeholder="email" required><br><br>
-            <label>Password</label><br>
-            <input type="password" placeholder="password" required><br><br>
-            <section class="submit">
-                <input type="submit" value="Login">
-            </section>
-        </div>
-    </form>
+            <div>
+                <label>Email</label><br>
+                <input type="email" placeholder="email" required><br><br>
+                <label>Password</label><br>
+                <input type="password" placeholder="password" required><br><br>
+                <section class="submit">
+                    <input type="submit" value="Login">
+                </section>
+            </div>
+        </form>
     </header>
     
 </template>
@@ -40,13 +40,14 @@ header{
                 color: aliceblue;
                 background-color: rgb(109, 204, 255);
                 cursor: pointer;
-                
             }
             :hover{
                 background-color: red;
             }
         }
         input{
+            border: none;
+            outline: none;
             padding: 0.4rem;
             border-radius: 5px;
         }

@@ -102,26 +102,35 @@
             </div>
         </section>
     </div>
-    <Footer />
+    <Foot />
+    <!-- <Product /> -->
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
-import Footer from '../components/Footer.vue'
+import Foot from '../components/Footer.vue'
+// import Product from './DetailProductView.vue'
 
 export default {
     components: {
         Navbar,
-        Footer
+        Foot,
+        // Product,
     }
 }
 </script>
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 .container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
     .show {
         height: 100vh;
+        width: 100%;
 
         .title {
             height: 40%;
@@ -163,8 +172,10 @@ export default {
 
         .model {
             height: 60vh;
+            // width: 100%;
             display: flex;
-            gap: 1rem;
+            justify-content: space-between;
+            // gap: 1rem;
             padding-top: 1rem;
 
             img {
@@ -174,6 +185,7 @@ export default {
     }
 
     .new-arrival {
+
         // margin-top: 1rem;
         .content {
             display: flex;
@@ -201,56 +213,70 @@ export default {
                 bottom: 0;
             }
         }
-        .item{
+
+        .item {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             margin-top: 1rem;
             grid-gap: 1rem;
-            div{
+
+            div {
+
                 // width: 100%;
-                img{
+                img {
                     width: 100%;
                     // height: 90%;
                 }
-                p:nth-child(3){
+
+                p:nth-child(3) {
                     color: #ff6200;
                 }
-                p{
+
+                p {
                     height: 5%;
                 }
             }
         }
-        .next{
+
+        .next {
             display: flex;
             justify-content: center;
             gap: 0.1rem;
             margin-top: 2rem;
-            button{
+
+            button {
                 border: 5px solid #ff6200;
-                a{
+
+                a {
                     text-decoration: none;
                     color: #ff6200;
                 }
-                
+
             }
-            :first-child{
+
+            :first-child {
                 width: 7rem;
                 height: 2.2rem;
             }
-            button:nth-child(1):hover{
+
+            button:nth-child(1):hover {
                 background-color: #ff6200;
-                a{
+
+                a {
                     color: white;
                 }
             }
-            button:nth-child(2){
+
+            button:nth-child(2) {
                 background-color: #ff6200;
-                a{
+
+                a {
                     color: white;
                     font-size: 1rem;
                 }
             }
-            button:nth-child(2):hover{
+
+            button:nth-child(2):hover {
                 border: 5px solid #ffb180;
                 background-color: #ffb180;
             }

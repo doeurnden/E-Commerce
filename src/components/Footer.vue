@@ -39,7 +39,9 @@
 </template>
 
 <script>
-
+// export default{
+//     name: Footer
+// }
 </script>
 
 <style lang="scss" scoped>
@@ -55,12 +57,21 @@
         gap: 5rem;
         padding: 3rem;
 
+        div:first-child{
+            p{
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
         .message {
             input[type=email] {
                 border: 3px solid rgb(255, 255, 255);
                 background-color: black;
                 color: aliceblue;
                 padding: 0.5rem 1rem;
+                outline: none;
                 // font-weight: bold;
             }
 
