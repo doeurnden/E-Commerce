@@ -170,16 +170,17 @@ export default {
             }
         }
 
-        .model {
+        .model{
             height: 60vh;
-            // width: 100%;
             display: flex;
             justify-content: space-between;
-            // gap: 1rem;
-            padding-top: 1rem;
-
-            img {
-                width: 100%;
+            margin: 1rem 0;
+            gap: 1rem;
+            div{
+                height: 100%;
+                img{
+                    width: 100%;
+                }
             }
         }
     }
