@@ -8,15 +8,9 @@
                     <p>On Order Over $50 - Use Coupon Code Over50</p>
                 </div>
                 <div class="link">
-                    <div>
-                        <router-link to="/women">Shop Women</router-link>
-                    </div>
-                    <div>
-                        <router-link to="/men">Shop Men</router-link>
-                    </div>
-                    <div>
-                        <router-link to="shopAll">Shop Sale</router-link>
-                    </div>
+                    <router-link to="/women">Shop Women</router-link>
+                    <router-link to="/men">Shop Men</router-link>
+                    <router-link to="/shopAll">Shop Sale</router-link>
                 </div>
             </div>
             <div class="model">
@@ -129,20 +123,25 @@ export default {
     box-sizing: border-box;
 
     .show {
-        height: 100vh;
         width: 100%;
 
         .title {
-            height: 40%;
+            height: 30vh;
             background-color: #ff6200;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
             .text {
+                height: 50%;
                 color: white;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
 
                 p:first-child {
                     font-size: 60px;
@@ -154,31 +153,41 @@ export default {
             }
 
             .link {
+                height: 50%;
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 gap: 4rem;
 
-                div {
+                a {
+                    text-decoration: none;
+                    color: white;
                     border: 2px solid white;
                     padding: 1rem 3rem;
                     font-size: 20px;
 
-                    a {
-                        color: white;
-                        text-decoration: none;
-                    }
+                }
+
+                a:hover {
+
+                    color: #ff6200;
+                    background-color: #ffffff;
+
                 }
             }
         }
 
-        .model{
-            height: 60vh;
+        .model {
+            // height: 60vh;
             display: flex;
             justify-content: space-between;
             margin: 1rem 0;
             gap: 1rem;
-            div{
+
+            div {
                 height: 100%;
-                img{
+
+                img {
                     width: 100%;
                 }
             }
@@ -283,5 +292,4 @@ export default {
             }
         }
     }
-}
-</style>
+}</style>
