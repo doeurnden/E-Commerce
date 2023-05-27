@@ -37,7 +37,7 @@
 <style lang="scss" scoped>
   @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 main{
-    height: 100vh;
+    height: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
