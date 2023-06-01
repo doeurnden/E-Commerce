@@ -14,7 +14,7 @@
     </div>
 
     <div class="right">
-      <div>
+      <div class="content">
         <span><router-link to="/shopAll">Shop All</router-link></span>
         <span><router-link to="/women">Women</router-link></span>
         <span><router-link to="/men">Men</router-link></span>
@@ -22,7 +22,7 @@
         <span><router-link to="/about">About</router-link></span>
         <span><router-link to="/contact">Contact</router-link></span>
       </div>
-      <div>
+      <div class="login-cart">
         <span>
           <router-link to="/login">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -33,7 +33,7 @@
           </router-link>
         </span>
         <span>
-          <router-link to="cart">
+          <router-link to="" id="cart" @click="store.state.sideBarState=true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path
                 d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
@@ -43,10 +43,11 @@
       </div>
     </div>
   </nav>
+
 </template>
   
-<script>
-
+<script setup>
+ import store from '../store';
 </script>
   
 <style lang="scss" scoped>
@@ -57,13 +58,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // position:sticky;
 
   .left {
     span {
       margin-right: 1rem;
     }
 
-    #den a{
+    #den a {
       color: white;
       background-color: black;
       padding: 0.5rem;
@@ -75,23 +77,29 @@ nav {
   .right {
     display: flex;
     gap: 1rem;
-    div a{
+
+    div a {
       text-decoration: none;
       color: black;
     }
-    :hover{
+
+    :hover {
       color: chocolate;
     }
 
-    div:first-child {
+    .content {
       span {
         margin-right: 1rem;
       }
     }
 
-    div:nth-child(2) {
+    .login-cart {
       span {
         margin: 1rem;
+
+        #cart {
+          transition: 100s;
+        }
       }
     }
   }
@@ -100,5 +108,7 @@ nav {
 svg {
   width: 12px;
 }
+
+
 </style>
   

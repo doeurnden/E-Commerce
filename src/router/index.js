@@ -44,11 +44,11 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/LoginView.vue')
     },
-    {
-      path: '/cart',
-      name: 'cart',
-      component: () => import('../views/CartView.vue')
-    },
+    // {
+    //   path: '/cart',
+    //   name: 'cart',
+    //   component: () => import('../views/CartView.vue')
+    // },
     {
       path: '/product',
       name: 'product',

@@ -54,8 +54,14 @@
 
     .data {
         display: flex;
-        gap: 5rem;
+        gap: 10rem;
         padding: 3rem;
+
+        div{
+            p{
+                margin-top: 1rem;
+            }
+        }
 
         div:first-child{
             p{

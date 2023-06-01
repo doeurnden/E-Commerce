@@ -106,6 +106,7 @@ export default {
 
 <style lang="scss" scoped>
 main{
+    height: 90vh;
     header{
         display: flex;
         flex-direction: column;
@@ -115,7 +116,7 @@ main{
         position: relative;
         margin-top: 4rem;
         p {
-            font-size: 4rem;
+            font-size: 6rem;
             text-align: center;
             margin: 0;
             line-height: .6;
@@ -124,7 +125,7 @@ main{
         }
         .line {
             height: 8px;
-            width: 18rem;
+            width: 25rem;
             background-color: #ff6200;
             position: absolute;
             bottom: 0;
@@ -132,10 +133,15 @@ main{
         
     }
     article{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
         .foc{
             display: flex;
             justify-content: center;
             gap: 10rem;
+            margin: 2rem 0;
         }
         .dot{
             width: 1rem;
@@ -144,6 +150,7 @@ main{
             margin: 1rem auto;
         }
         .stock{
+            margin: 4rem 0;
             h2{
                 text-align: center;
             }
@@ -158,6 +165,7 @@ main{
             }
         }
         .input-field{
+            margin: 2rem 0;
             h2{
                 text-align: center;
             }
@@ -165,6 +173,7 @@ main{
                 display: flex;
                 justify-content: center;
                 gap: 1rem;
+                margin: 4rem 0;
                 input{
                     padding: .5rem 1rem;
                 }
