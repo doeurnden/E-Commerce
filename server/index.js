@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
 var cors = require('cors')
-const userRouter = require('./src/router/user')
+const userRouter = require('./src/routes/user')
 
 
 const connectDB = async()=>{
