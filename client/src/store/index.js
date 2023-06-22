@@ -20,7 +20,8 @@ export default createStore({
         image:"image/homePage/t4.png",
         name:"T1-Shirt",
         price:10
-      },        {
+      },
+      {
         image:"image/homePage/t4.png",
         name:"T1-Shirt",
         price:10

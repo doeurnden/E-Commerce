@@ -98,8 +98,6 @@
 </template>
 
 <script setup>
-
-import Navbar from '../components/Navbar.vue'
 import mainLayout from '../layout/mainLayout.vue';
 
 </script>

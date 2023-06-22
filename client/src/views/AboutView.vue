@@ -9,14 +9,13 @@
             <img src="../assets/image/den-no-back.png" alt="logo">
         </div>
     </main>
-
+    <Footer1/>
 </template>
 
 <script setup>
 
 import Navbar from '../components/Navbar.vue'
-
-
+import Footer1 from '../components/Footer.vue'
 
 </script>
 
