@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <main class="container">
         <div class="img"> 
             <img src="../assets/image/signup.jpg" alt="signup">
         </div>
@@ -7,16 +7,16 @@
             <form>
                 <h2>Sign Up</h2>
                 <div>
-                    <label for="username">Username</label><br>
-                    <input type="text" placeholder="username" required>
-                </div>
-                <div>
                     <label for="fname">First Name</label><br>
                     <input type="text" placeholder=" Frist Name" required>
                 </div>
                 <div>
                     <label for="lname">Last Name</label><br>
                     <input type="text" placeholder=" Last Name" required>
+                </div>
+                <div>
+                    <label for="username">Username</label><br>
+                    <input type="text" placeholder="username" required>
                 </div>
                 <div>
                     <label for="pws">Password</label><br>
@@ -33,7 +33,7 @@
                 <div class="btn"><button>Signup</button></div>
             </form>
         </div> 
-    </div>
+    </main>
 </template>
 
 <script>
@@ -54,20 +54,11 @@
         }
     } 
     .form{
+        // height: 100%;
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        form{
-            // width: 100%;
-            h2{
-                text-align: center;
-            }
-            .btn{
-                display: flex;
-                justify-content: center;
-            }
-        }   
     }
 }
 
