@@ -1,128 +1,175 @@
 <template>
-    <main>
-        <div class="container">
-            <div class="left-side">
-                <h1>Welcome Back Again</h1>
-            </div>
-            <aside class="right-side">
-                <div>
-                    <h2>Login</h2><br>
-                    <div class="form">
-                        <form>
-                            <input type="text" placeholder="username" required><br><br>
-                            <input type="password" placeholder="password" required>
-                            <p>forget password?</p><br>
-                            <div><input type="submit" value="login"></div><br>
-                            <p>Don't have an account?<router-link to="signup"> sign up</router-link></p>
-                        </form>
-                    </div>
-                </div>
-            </aside>
+    <main class="container">
+        <div class="img"> 
+            <img src="../assets/image/login.png" alt="signup">
         </div>
+        <div class="form">
+            <form>
+                <h2>Login</h2>
+                <div>
+                    <!-- <label for="email">Email</label><br> -->
+                    <input type="email" placeholder="email" required>
+                </div>
+                <div>
+                    <!-- <label for="pws">Password</label><br> -->
+                    <input type="password" placeholder="password" required>
+                </div>
+                <div class="btn"><button>Login</button></div>
+            </form>
+        </div> 
     </main>
 </template>
 
-<script setup>
+<script>
+
 </script>
 
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-main{
-    height: 98vh;
+.container {
+    width: 77rem;
+    height: 27rem;
+    // height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e2eaf9;
-    .container{
-        display: flex;
-        width: 80%;
-        height: 80%;
-        // border-radius: 10px;
-        .left-side{
-            width: 50%;
-            height: 100%;
-            border-radius: 10px 0px 0px 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            background-color: #ff6200;
-            h1{
-                font-size: 50px;
-                text-shadow: 1px 1px 20px #766363;
-                font-family: 'Koulen', cursive;
-                text-align: center;
-            }
-        }
-        .right-side{
-            width: 50%;
-            height: 100%;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 0px 10px 10px 0px;;
-            div{
-                h2{
-                    text-align: center;
-                    color: #ff6200;
-                    font-size: 40px;
-                }
-                .form{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    form{
-                        // width: 100%;
-                        input[type=text],input[type=password]{
-                            padding: .8rem 7rem .8rem 1rem;
-                            border: none;
-                            background-color: #efefef;
-                            outline-color: #ff6200;
-                            border-radius: 5px;
-                            // margin: .5rem 1rem;
-                        }
-                        input[type=submit]{
-                            padding: .5rem 2rem;
-                            color: #ffffff;
-                            background-color: #ff6200;
-                            border: none;
-                            border-radius: 5px;
-                        }
-                        input[type=submit]:hover{
-                            cursor: pointer;
-                        }
-                        div{
-                            display: flex;
-                            justify-content: center;
-                        }
-                        p{
-                            text-align: end;
-                            color: #ff6200;
-                            a{
-                                text-decoration: none;
-                                color: #ff6200;
-                            }
-                        }
-                        button{
-                            padding: .5rem 1rem;
-                            color: #ff6200;
-                            border: 1px solid #ff6200;
-                            border-radius: 5px;
-                            svg{
-                                height: 12px; 
-                                margin-left: 1rem; 
-                                fill: #ff6200;
-                            }
-                        }
-                        button:hover{
-                            cursor: pointer;
-                        }
-                    }
-                }
+    background-color: antiquewhite;
 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .img{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eeeeee;
+        // background-color: aqua;
+        img {
+            // width: 100%;
+            height: 100%;
+            
+            // object-fit: cover;
+        }
+    } 
+    .form{
+        // height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            div{
+                width: 100%;
+                input{
+                    padding: .5rem;
+                    width: 80%;
+                    margin: 0 10%;
+                }
+            }
+            .btn{
+                display: flex;
+                justify-content: center;
+                button{
+                    width: 5rem;
+                    height: 2rem;
+                }
             }
         }
     }
 }
+@media only screen and (max-width: 1100px){
+    .container{
+        width: 50rem;
+        height: 28rem;
+
+        .form{
+            form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // gap: 1rem;
+            div{
+                width: 100%;
+                input{
+                    // padding: .5rem;
+                    width: 80%;
+                    margin: 0 10%;
+                }
+            }
+            .btn{
+                display: flex;
+                justify-content: center;
+                button{
+                    width: 5rem;
+                    height: 2rem;
+                }
+            }
+        }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        .img{
+            width: 100%;
+            height: 50%;
+            img{
+                // height: 100%;
+                width:100%;
+            }
+        }
+        .form{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            form{
+                width: 100%;
+                height: 100%;
+                h2{ 
+                    text-align: center;
+                    padding-bottom: 15%;
+                }
+                div{
+                    padding: 0;
+                    margin: 0;
+                    input{
+                        width: 90%;
+                        margin: 0 5%;
+                        padding: .5rem;
+                        // margin:  1rem;
+                    }
+                }
+                .btn{
+                    text-align: center;
+                    margin-top: 1rem;
+                    // padding-top: 10%;
+                    button{
+                        width: 4rem;
+                        height: 1.5rem;
+                        border: none;
+                        border-radius: .2rem;
+                        color: white;
+                        background-color: black;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 </style>
