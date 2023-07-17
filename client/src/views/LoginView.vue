@@ -15,6 +15,7 @@
                     <input type="password" placeholder="password" required>
                 </div>
                 <div class="btn"><button>Login</button></div>
+                <p>Don't have an account ? <router-link to="signup" style="text-decoration: none;">Sign up</router-link></p>
             </form>
         </div> 
     </main>
@@ -27,7 +28,7 @@
 <style lang="scss" scoped>
 .container {
     width: 77rem;
-    height: 27rem;
+    height: 37rem;
     // height: 100%;
     display: flex;
     background-color: antiquewhite;

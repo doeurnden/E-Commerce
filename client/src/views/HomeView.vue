@@ -1,7 +1,7 @@
 <template>
     <mainLayout>
         <div class="container">
-            <section class="show">
+            <section class="banner">
                 <div class="title">
                     <div class="text">
                         <p>Free Shipping</p>
@@ -115,7 +115,7 @@ import mainLayout from '../layout/mainLayout.vue';
     padding: 0;
     box-sizing: border-box;
 
-    .show {
+    .banner {
         width: 100%;
 
         .title {

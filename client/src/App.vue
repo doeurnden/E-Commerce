@@ -7,6 +7,4 @@
     import sideBar from './components/sideBar.vue';
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

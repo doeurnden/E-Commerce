@@ -7,16 +7,12 @@
             <form>
                 <h2>Sign Up</h2>
                 <div>
-                    <!-- <label for="fname">First Name</label><br> -->
-                    <input type="text" placeholder="first name" required>
-                </div>
-                <div>
-                    <!-- <label for="lname">Last Name</label><br> -->
-                    <input type="text" placeholder="last name" required>
-                </div>
-                <div>
                     <!-- <label for="username">Username</label><br> -->
                     <input type="text" placeholder="username" required>
+                </div>
+                <div>
+                    <!-- <label for="email">Email</label><br> -->
+                    <input type="email" placeholder="email" required>
                 </div>
                 <div>
                     <!-- <label for="pws">Password</label><br> -->
@@ -25,10 +21,6 @@
                 <div>
                     <!-- <label for="r-pws">Confirm password</label><br> -->
                     <input type="password" placeholder="repeat password" required>
-                </div>
-                <div>
-                    <!-- <label for="email">Email</label><br> -->
-                    <input type="email" placeholder="email" required>
                 </div>
                 <div class="btn"><button>Signup</button></div>
             </form>

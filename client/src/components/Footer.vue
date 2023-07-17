@@ -1,29 +1,23 @@
 <template>
     <section class="section1">
         <div class="data">
-            <div>
+            <div class="link">
                 <p><router-link to="/shopAll">Shop All</router-link></p>
                 <p><router-link to="/about">About</router-link></p>
                 <p><router-link to="/contact">Contact</router-link></p>
                 <p>Stockists</p>
             </div>
-            <div>
+            <div class="more-info">
                 <p>FQA</p>
                 <p>Shipping & Returns</p>
                 <p>Store Policy</p>
                 <p>Payment Methods</p>
             </div>
-            <div>
-                <p>Instagram</p>
-                <p>Printerest</p>
-                <p>Facebook</p>
-                <p>Twitter</p>
-            </div>
-            <div class="message">
-                <h3>Join our mailling list</h3>
-                <p>and get 10% of</p>
-                <input type="email" placeholder="Enter your email here*"><br><br>
-                <input type="submit" value="Subscribe Now">
+            <div class="social">
+                <p>Instagram <font-awesome-icon icon="fa-brands fa-square-instagram" /></p>
+                <p>Pinterest <font-awesome-icon icon="fa-brands fa-pinterest" /></p>
+                <p>Facebook <font-awesome-icon icon="fa-brands fa-facebook" /></p>
+                <p>Twitter <font-awesome-icon icon="fa-brands fa-twitter" /></p>
             </div>
         </div>
     </section>
@@ -44,31 +38,44 @@
 
 <style lang="scss" scoped>
 .section1 {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     background-color: black;
     color: white;
     margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #000000;
 
     .data {
+        width: 100%;
+        height: 100%;
         display: flex;
-        gap: 10rem;
-        padding: 3rem;
+        justify-content: space-around;
+        align-items: center;
 
-        div{
-            p{
-                margin-top: 1rem;
+        div {
+            height: 100%;
+
+            p {
+                height: 25%;
+                display: flex;
+                // justify-content: space-around;
+                align-items: center;
             }
         }
 
-        div:first-child{
-            p{
-                a{
+        div:first-child {
+            p {
+                a {
                     color: white;
                     text-decoration: none;
                 }
             }
         }
+
         .message {
             input[type=email] {
                 border: 3px solid rgb(255, 255, 255);
@@ -99,6 +106,7 @@
 }
 
 .section2 {
+    margin-top: 1rem;
     p {
         margin-left: 5%;
 
@@ -107,5 +115,4 @@
             height: 16px;
         }
     }
-}
-</style>
+}</style>

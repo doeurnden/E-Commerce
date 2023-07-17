@@ -12,9 +12,8 @@
                             <h2>Flagship Store</h2>
                         </div>
                         <div>
-                            <p>500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
+                            <p>
+                                Toul Kork, Phnom Penh
                             </p>
                         </div>
                     </div>
@@ -23,9 +22,9 @@
                             <h2>Opening Hours</h2>
                         </div>
                         <div>
-                            Mon-Fri: 7am - 10am <br>
-                            Saturday: 8am - 10pm <br>
-                            Sunday: 8am - 11pm
+                            Mon-Fri: 8am - 10pm <br>
+                            Saturday: 8am - 5pm <br>
+                            Sunday: 9am - 9pm
                         </div>
                     </div>
                     <div>
@@ -33,9 +32,8 @@
                             <h2>Customer service</h2>
                         </div>
                         <div>
-                            <p>1-800-000-000 <br>
-                                123-456-7890 <br>
-                                info@doeurnden.xyz
+                            <p>
+                                088 67 00 929
                             </p>
                         </div>
                     </div>

@@ -26,6 +26,9 @@
                         <div style="width: 3rem; height: 3rem; background-color: aqua;"></div>
                         <div style="width: 3rem; height: 3rem; background-color: rgb(0, 0, 0);"></div>
                     </div>
+                    <div>
+                        <p>Make in Thailand</p>
+                    </div>
                 </div>
                 <div class="product-info">
                     <div class="title-cost">
@@ -42,28 +45,24 @@
                                 </div>
                             </div>
                             <div class="size-guide">
-                                <div>
-                                    <p>size</p>
-                                    <p>size guide</p>
+                                <div class="size">
+                                    <span>size</span>
+                                    <span>check size</span>
                                 </div>
-                                <select>
-                                    <option value="0">XS</option>
-                                    <option value="1">S</option>
-                                    <option value="2">M</option>
-                                    <option value="3">L</option>
+                                <select style="width: 5rem; height: 2rem;">
+                                    <option value="" selected disabled hidden>Select</option>
+                                    <option value="1">XS</option>
+                                    <option value="2">S</option>
+                                    <option value="3">M</option>
+                                    <option value="4">L</option>
                                 </select>
                             </div>
                             <div class="qty">
-                                <p>Quatity</p>
+                                <p>Qty</p>
                                 <input type="number">
                             </div>
                         </form>
                         <div>
-                            <p>Product ID: 112233</p>
-                            <p>About product</p>
-                            <!-- <p>T1 t-shirt combines a captivating design, exceptional comfort, high-quality craftsmanship,
-                                and
-                                versatile styling options.</p> -->
                             <button>Add to Cart</button>
                         </div>
                     </div>
@@ -76,7 +75,8 @@
                 <div class="slide-another-product">
                     <div class="left-direction">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
-                            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                            <path
+                                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
                         </svg>
                     </div>
                     <div class="content-list-product">
@@ -103,74 +103,87 @@ import mainLayout from '../layout/mainLayout.vue';
 </script>
 
 <style lang="scss" scoped>
-.container{
-    .navbar-link{
+.container {
+    .navbar-link {
         display: flex;
         justify-content: space-around;
-        .prev-next{
+
+        .prev-next {
             display: flex;
-            // gap: 1rem;
+            gap: 1rem;
         }
     }
-    .detail-product-info{
+
+    .detail-product-info {
         display: flex;
         justify-content: space-around;
-        .image-rotation{
-            .rotation{
+
+        .image-rotation {
+            .rotation {
                 display: flex;
             }
         }
-        .product-info{
-            .form{
-                .color-product{
-                    .color{
+
+        .product-info {
+            .form {
+                .color-product {
+                    .color {
                         display: flex;
                         gap: 1rem;
                     }
-                    .size-guide{
-                        div{
-                            display: flex;
+
+                    .size-guide {
+                        .size {
+                            display: inline-block;
+                            color: antiquewhite;
                         }
                     }
                 }
             }
         }
     }
-    .related-products{
+
+    .related-products {
         display: flex;
         flex-direction: column;
-        justify-content:center ;
+        justify-content: center;
         align-items: center;
-        .title{
-            h1{
+
+        .title {
+            h1 {
                 text-align: center;
             }
         }
-        .slide-another-product{
+
+        .slide-another-product {
             display: flex;
             gap: 1rem;
-            .left-direction{
+
+            .left-direction {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            .content-list-product{
+
+            .content-list-product {
                 height: 246px;
                 display: flex;
                 gap: 1rem;
-                div{
+
+                div {
                     height: 100%;
-                    img{
+
+                    img {
                         height: 100%;
                     }
                 }
             }
-            .right-direction{
+
+            .right-direction {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
         }
     }
-}
-</style>
+}</style>
