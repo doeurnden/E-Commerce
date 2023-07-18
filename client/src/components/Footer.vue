@@ -37,9 +37,10 @@
 </script>
 
 <style lang="scss" scoped>
+*{margin: 0;}
 .section1 {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
     // display: flex;
     // justify-content: center;
     // align-items: center;

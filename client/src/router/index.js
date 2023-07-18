@@ -42,7 +42,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/auth/LoginView.vue')
     },
     // {
     //   path: '/cart',
@@ -52,17 +52,22 @@ const router = createRouter({
     {
       path: '/product',
       name: 'product',
-      component: () => import('../views/DetailProductView.vue')
+      component: () => import('../views/product/DetailProductView.vue')
     },
     {
       path: '/signup',
       name: 'signup',
-      component: () => import('../views/SignUpView.vue')
+      component: () => import('../views/auth/SignUpView.vue')
     },
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../views/Admin-dashboard.vue')
+      component: () => import('../views/dashboard/Admin-dashboard.vue')
+    },
+    {
+      path: '/cart-view-detail',
+      name: 'cart-view-detail',
+      component: () => import('../views/cart/CartViewDetail.vue')
     },
   ]
 })
