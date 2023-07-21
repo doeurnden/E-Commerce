@@ -94,7 +94,7 @@ main {
 
         .line {
             height: 8px;
-            width: 6rem;
+            width: 7rem;
             background-color: #ff6200;
             position: absolute;
             bottom: 0;

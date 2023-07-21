@@ -42,7 +42,12 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/auth/LoginView.vue')
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: () => import('../views/auth/SignUpView.vue')
     },
     // {
     //   path: '/cart',
@@ -50,20 +55,31 @@ const router = createRouter({
     //   component: () => import('../views/CartView.vue')
     // },
     {
-      path: '/product',
-      name: 'product',
-      component: () => import('../views/DetailProductView.vue')
+      path: '/product-detail',
+      name: 'product-detaile',
+      component: () => import('../views/product/DetailProductView.vue')
     },
     {
-      path: '/signup',
-      name: 'signup',
-      component: () => import('../views/SignUpView.vue')
+      path: '/product-detail-img',
+      name: 'product-detaile-img',
+      component: () => import('../views/product/DetailProductViewImg.vue')
     },
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../views/Admin-dashboard.vue')
+      component: () => import('../views/dashboard/Admin-dashboard.vue')
     },
+    {
+      path: '/cart-view-detail',
+      name: 'cart-view-detail',
+      component: () => import('../views/cart/CartViewDetail.vue')
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: () => import('../views/payment/paymentMethodView.vue')
+    }
+    
   ]
 })
 
