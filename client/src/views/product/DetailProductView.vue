@@ -20,7 +20,7 @@
             <main class="detail-product-info">
                 <div class="image-rotation">
                     <div class="image">
-                        <img src="../assets/image/homePage/t5.png" alt="t5">
+                        <img src="../../assets/image/homePage/t5.png" alt="t5">
                     </div>
                     <div class="rotation" style="display: flex; gap: .5rem;">
                         <div style="width: 3rem; height: 3rem; background-color: aqua;"></div>
@@ -80,10 +80,10 @@
                         </svg>
                     </div>
                     <div class="content-list-product">
-                        <div><img src="../assets/image/shopAll/front/sa1f.jpg" alt="sa1f"></div>
-                        <div><img src="../assets/image/shopAll/front/sa2f.jpg" alt="sa2f"></div>
-                        <div><img src="../assets/image/shopAll/front/sa3f.jpg" alt="sa3f"></div>
-                        <div><img src="../assets/image/shopAll/front/sa4f.jpg" alt="sa4f"></div>
+                        <div><img src="../../assets/image/shopAll/front/sa1f.jpg" alt="sa1f"></div>
+                        <div><img src="../../assets/image/shopAll/front/sa2f.jpg" alt="sa2f"></div>
+                        <div><img src="../../assets/image/shopAll/front/sa3f.jpg" alt="sa3f"></div>
+                        <div><img src="../../assets/image/shopAll/front/sa4f.jpg" alt="sa4f"></div>
                     </div>
                     <div class="right-direction">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" style="height: 16px;">
@@ -98,7 +98,7 @@
 </template>
 
 <script setup>
-import mainLayout from '../layout/mainLayout.vue';
+import mainLayout from '../../layout/mainLayout.vue';
 
 </script>
 

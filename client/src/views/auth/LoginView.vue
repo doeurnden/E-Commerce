@@ -1,7 +1,7 @@
 <template>
     <main class="container">
         <div class="img"> 
-            <img src="@/assets/image/login.png" alt="signup">
+            <img src="@/assets/image/den.png" alt="den">
         </div>
         <div class="form">
             <form>
@@ -14,24 +14,38 @@
                     <!-- <label for="pws">Password</label><br> -->
                     <input type="password" placeholder="password" required>
                 </div>
-                <div class="btn"><button>Login</button></div>
-                <p>Don't have an account ? <router-link to="signup" style="text-decoration: none;">Sign up</router-link></p>
+                <div class="btn"><button><b>Log in</b></button></div>
+                <p>Don't have an account ? <router-link to="signup" style="text-decoration: none; color: coral;">Sign up</router-link></p>
             </form>
         </div> 
     </main>
 </template>
 
 <script>
+export default{
+    data(){
+        return{
+            email: '',
+            password: ''
+        }
+    }
+}
 
 </script>
 
 <style lang="scss" scoped>
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
 .container {
-    width: 77rem;
-    height: 37rem;
+    width: 87rem;
+    height: 47rem;
     // height: 100%;
     display: flex;
-    background-color: antiquewhite;
+    color: white;
+    background-color: rgb(0, 0, 0);
 
     position: fixed;
     top: 50%;
@@ -43,13 +57,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #eeeeee;
+        border-right: 5px solid white;
+        // background-color: #eeeeee;
         // background-color: aqua;
         img {
             // width: 100%;
             height: 100%;
-            
-            // object-fit: cover;
         }
     } 
     .form{
@@ -58,6 +71,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-left: 5px solid white;
         form{
             width: 100%;
             display: flex;
@@ -69,8 +83,8 @@
                 width: 100%;
                 input{
                     padding: .5rem;
-                    width: 80%;
-                    margin: 0 10%;
+                    width: 70%;
+                    margin: 0 15%;
                 }
             }
             .btn{
@@ -86,7 +100,7 @@
 }
 @media only screen and (max-width: 1100px){
     .container{
-        width: 50rem;
+        width: 45rem;
         height: 28rem;
 
         .form{
@@ -127,6 +141,8 @@
         .img{
             width: 100%;
             height: 50%;
+            border-bottom: 5px solid white;
+            border-right: none;
             img{
                 // height: 100%;
                 width:100%;
@@ -136,6 +152,8 @@
             width: 100%;
             height: 50%;
             display: flex;
+            border-top: 5px solid white;
+            border-left: none;
             form{
                 width: 100%;
                 height: 100%;
@@ -162,8 +180,8 @@
                         height: 1.5rem;
                         border: none;
                         border-radius: .2rem;
-                        color: white;
-                        background-color: black;
+                        color: rgb(0, 0, 0);
+                        background-color: rgb(255, 255, 255);
 
                     }
                 }

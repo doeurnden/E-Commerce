@@ -7,7 +7,7 @@
             </header>
             <div class="content">
                 <div class="content-img">
-                    <img src="../assets/image/den-no-back.png" alt="logo">
+                    <img src="../assets/image/ex1.jpg" alt="logo">
                 </div>
                 <div class="content-description">
                     <p>Welcome to DEN Store, an online platform created by
@@ -30,10 +30,17 @@ import mainLayout from '@/layout/mainLayout.vue'
 </script>
 
 <style lang="scss" scoped>
- @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 main {
-    height: 60vh;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
     header {
         display: flex;
         flex-direction: column;
@@ -66,7 +73,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        width: 100%;
         .content-img,
         .content-description {
             width: 50%;
@@ -76,9 +83,12 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-
+            // width: 100%;
             img {
-                width: 50%;
+                width: 80%;
+                // height: 100%;
+                opacity: .8;
+                border-radius: 5px;
             }
         }
 
@@ -86,12 +96,19 @@ main {
             display: flex;
             justify-content: center;
             p{
-                text-align: center;
-                width: 50%;
-                font-size: 18px;
-                font-family:'Koulen', cursive;
-                letter-spacing: 3px;
+                width: 100%;
+                font-size: large;
             }
         }
     }
-}</style>
+}
+@media only screen and (max-width: 1000px){
+    main{
+        height: 70vh;
+        .content-description {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+</style>

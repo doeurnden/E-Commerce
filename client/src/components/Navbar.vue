@@ -33,15 +33,10 @@
       </div>
       <div class="login-cart">
         <span>
-          <RouterLink to="/login">
-            <font-awesome-icon icon="fa-solid fa-user" />
-            Login
-          </RouterLink>
+          <RouterLink to="/login"><font-awesome-icon icon="fa-solid fa-user" /></RouterLink>
         </span>
         <span>
-          <RouterLink to="" id="cart" @click="store.state.sideBarState = true">
-            <font-awesome-icon icon="fa-solid fa-bag-shopping" />
-          </RouterLink>
+          <RouterLink to="" id="cart" @click="store.state.sideBarState = true"><font-awesome-icon icon="fa-solid fa-bag-shopping" /></RouterLink>
         </span>
       </div>
     </div>
@@ -75,7 +70,7 @@ nav {
       background-color: black;
       padding: 0.5rem;
       text-decoration: none;
-      margin-left: 1rem;
+      // margin-left: 1rem;
     }
   }
 
@@ -138,10 +133,6 @@ svg {
     .right {
       width: 60%;
       // display: flex;
-      gap: 0rem;
-      // justify-content: flex-end;
-      .content{}
-      .login-cart{}
     }
   }
 }

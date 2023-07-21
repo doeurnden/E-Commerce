@@ -75,27 +75,21 @@
                         <button>Checkout</button>
                     </div>
                 </form>
-            </main>
-        </div>
-        <main class="code-promotion-form">
-            <div class="container1">
-                <h2>Promotion Code and Address Form</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="promo-code">Promotion Code:</label>
-                        <input type="text" id="promo-code" name="promo-code" placeholder="Enter your code">
+                <form action="#" class="address-form">
+                    <div class="address-title">
+                        <h2>Address Delivery</h2>
                     </div>
-                    <div class="form-group">
-                        <label for="address">Address:</label>
-                        <!-- <textarea id="address" name="address" placeholder="Enter your address"></textarea> -->
+                    <div class="address-input">
+                        <label for="address">Your address</label><br>
                         <textarea name="address" id="address" cols="30" rows="10"></textarea>
                     </div>
-                    <div class="form-group">
-                        <button type="submit">Apply</button>
+                    <div>
+                        <input type="submit" value="apply">
                     </div>
                 </form>
-            </div>
-        </main>
+            </main>
+        </div>
+
     </mainLayout>
 </template>
 
@@ -188,11 +182,12 @@ export default {
     .order-summary {
         width: 50%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
         form {
             width: 50%;
-
+            height: 50%;
             .btn {
                 width: 100%;
                 display: flex;
@@ -208,49 +203,13 @@ export default {
                 }
             }
         }
-    }
-}
-
-.code-promotion-form {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    .container1 {
-        width: 50%;
-        //   margin: 0 auto;
-        padding: 20px;
-        background-color: #f2f2f2;
-        border-radius: 5px;
-
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-group input[type="text"],
-        .form-group textarea {
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        .form-group button {
-            padding: 8px 15px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
+        .address-form{
+            .address-input{
+                width: 100%;
+                textarea{width: 100%;}
+            }
         }
     }
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -279,11 +238,12 @@ export default {
             }
         }
     }
-    .code-promotion-form{
+
+    .code-promotion-form {
+
         // width: 50%;
-        .container1{
+        .container1 {
             width: 80%;
         }
     }
-}
-</style>
+}</style>

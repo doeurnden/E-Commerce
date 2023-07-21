@@ -44,20 +44,25 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/auth/LoginView.vue')
     },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: () => import('../views/auth/SignUpView.vue')
+    },
     // {
     //   path: '/cart',
     //   name: 'cart',
     //   component: () => import('../views/CartView.vue')
     // },
     {
-      path: '/product',
-      name: 'product',
+      path: '/product-detail',
+      name: 'product-detaile',
       component: () => import('../views/product/DetailProductView.vue')
     },
     {
-      path: '/signup',
-      name: 'signup',
-      component: () => import('../views/auth/SignUpView.vue')
+      path: '/product-detail-img',
+      name: 'product-detaile-img',
+      component: () => import('../views/product/DetailProductViewImg.vue')
     },
     {
       path: '/dashboard',
@@ -69,6 +74,12 @@ const router = createRouter({
       name: 'cart-view-detail',
       component: () => import('../views/cart/CartViewDetail.vue')
     },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: () => import('../views/payment/paymentMethodView.vue')
+    }
+    
   ]
 })
 

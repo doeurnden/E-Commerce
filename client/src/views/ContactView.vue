@@ -41,43 +41,10 @@
                 <div class="dot"></div>
                 <div class="stock">
                     <div>
-                        <h2>Stockists</h2>
+                        <h1 id="stockists">Stockists</h1>
                     </div>
                     <div class="stockists">
-                        <div class="each-stock">
-                            <div>
-                                500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
-                            </div>
-                            <div>
-                                500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
-                            </div>
-                            <div>
-                                500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
-                            </div>
-                        </div>
-                        <div class="each-stock">
-                            <div>
-                                500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
-                            </div>
-                            <div>
-                                500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
-                            </div>
-                            <div>
-                                500 Terry Francine St. <br>
-                                San Francisco, CA 94158 <br>
-                                123-456-7890
-                            </div>
-                        </div>
+                        <h2 style="text-align: center;">Toul Kouk, Phnom Penh</h2>
                     </div>
                 </div>
                 <div class="dot"></div>
@@ -135,11 +102,6 @@ main {
     }
 
     article {
-
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
         .foc {
             display: flex;
             justify-content: center;
@@ -156,19 +118,8 @@ main {
 
         .stock {
             margin: 4rem 0;
-
-            h2 {
+            h1,h2 {
                 text-align: center;
-            }
-
-            .stockists {
-                .each-stock {
-                    display: flex;
-                    justify-content: center;
-                    gap: 10rem;
-                    text-align: center;
-                    margin-top: 1rem;
-                }
             }
         }
 
