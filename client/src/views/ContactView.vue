@@ -8,50 +8,32 @@
             <article>
                 <div class="foc">
                     <div>
-                        <div>
-                            <h2>Flagship Store</h2>
-                        </div>
-                        <div>
-                            <p>
-                                Toul Kork, Phnom Penh
-                            </p>
-                        </div>
+                        <h2>Flagship Store</h2>
+                        <p>Toul Kork, Phnom Penh</p>
                     </div>
                     <div>
-                        <div>
-                            <h2>Opening Hours</h2>
-                        </div>
-                        <div>
+                        <h2>Opening Hours</h2>
+                        <p>
                             Mon-Fri: 8am - 10pm <br>
                             Saturday: 8am - 5pm <br>
                             Sunday: 9am - 9pm
-                        </div>
+                        </p>
                     </div>
                     <div>
-                        <div>
-                            <h2>Customer service</h2>
-                        </div>
-                        <div>
-                            <p>
-                                088 67 00 929
-                            </p>
-                        </div>
+                        <h2>Customer service</h2>
+                        <p>088 67 00 929</p>
                     </div>
                 </div>
                 <div class="dot"></div>
                 <div class="stock">
-                    <div>
-                        <h1 id="stockists">Stockists</h1>
-                    </div>
-                    <div class="stockists">
-                        <h2 style="text-align: center;">Toul Kouk, Phnom Penh</h2>
-                    </div>
+                    <h1>Stockists</h1>
+                    <h2>Toul Kouk, Phnom Penh</h2>
                 </div>
                 <div class="dot"></div>
                 <div class="input-field">
-                    <h2>For inquiries regarding an order, please include your <br>
+                    <p>For inquiries regarding an order, please include your <br>
                         order number and the date your order was placed
-                    </h2>
+                    </p>
                     <form action="#">
                         <input type="text" placeholder="Name">
                         <input type="email" placeholder="Email">
@@ -71,8 +53,6 @@ import mainLayout from '../layout/mainLayout.vue';
 
 <style lang="scss" scoped>
 main {
-    height: 90vh;
-
     header {
         display: flex;
         flex-direction: column;
@@ -83,7 +63,7 @@ main {
         margin-top: 4rem;
 
         p {
-            font-size: 6rem;
+            font-size: 4rem;
             text-align: center;
             margin: 0;
             line-height: .6;
@@ -93,7 +73,7 @@ main {
 
         .line {
             height: 8px;
-            width: 25rem;
+            width: 17rem;
             background-color: #ff6200;
             position: absolute;
             bottom: 0;
@@ -104,21 +84,22 @@ main {
     article {
         .foc {
             display: flex;
-            justify-content: center;
-            gap: 10rem;
-            margin: 2rem 0;
+            justify-content: space-around;
+            margin-top: 5rem;
         }
 
         .dot {
             width: 1rem;
             height: 1rem;
             background-color: #ff6200;
-            margin: 1rem auto;
+            margin: 3rem auto;
         }
 
         .stock {
-            margin: 4rem 0;
-            h1,h2 {
+            // margin: 4rem 0;
+
+            h1,
+            h2 {
                 text-align: center;
             }
         }
@@ -126,7 +107,7 @@ main {
         .input-field {
             margin: 2rem 0;
 
-            h2 {
+            p {
                 text-align: center;
             }
 
@@ -164,4 +145,117 @@ main {
             }
         }
     }
-}</style>
+}
+@media only screen and (max-width: 500px) {
+    main {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        position: relative;
+        margin-top: 4rem;
+
+        p {
+            //4rem-3rem
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+            line-height: .6;
+            z-index: 10;
+            font-family: 'Koulen', cursive;
+        }
+
+        .line {
+            height: 8px;
+            //17-13
+            width: 13rem;
+            background-color: #ff6200;
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+
+    article {
+        .foc {
+            display: flex;
+            //space-aroun -> spece-between
+            justify-content: space-between;
+            //5-4
+            margin-top: 4rem;
+
+            div{
+                text-align: center;
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .dot {
+            width: 1rem;
+            height: 1rem;
+            background-color: #ff6200;
+            margin: 3rem auto;
+        }
+
+        .stock {
+            // margin: 4rem 0;
+
+            h1,
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .input-field {
+            margin: 2rem 0;
+
+            p {
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                margin: 4rem 0;
+
+                input {
+                    padding: .5rem 1rem;
+                }
+
+                input[type=text],
+                input[type=email] {
+                    border: 2px solid #ff6200;
+                    outline: none;
+                }
+
+                ::-webkit-input-placeholder {
+                    color: #ff6200;
+                }
+
+                input[type=submit] {
+                    border: none;
+                    color: white;
+                    background-color: #ff6200;
+                    padding: .5rem 2rem;
+                    cursor: pointer;
+                }
+
+                input[type=submit]:hover {
+                    background-color: #ffb180;
+                }
+            }
+        }
+    }
+}
+}
+</style>

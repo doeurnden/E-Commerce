@@ -30,13 +30,8 @@ import mainLayout from '@/layout/mainLayout.vue'
 </script>
 
 <style lang="scss" scoped>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 main {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,11 +99,80 @@ main {
 }
 @media only screen and (max-width: 1000px){
     main{
-        height: 70vh;
+        height: 80vh;
         .content-description {
             display: flex;
             justify-content: center;
         }
     }
+}
+@media only screen and (max-width: 500px){
+    main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        position: relative;
+        margin-top: 4rem;
+
+        p {
+            font-size: 4rem;
+            text-align: center;
+            margin: 0;
+            line-height: .6;
+            z-index: 10;
+            font-family: 'Koulen', cursive;
+        }
+
+        .line {
+            height: 8px;
+            width: 15rem;
+            background-color: #ff6200;
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .content-img,
+        .content-description {
+            width: 50%;
+        }
+
+        .content-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // width: 100%;
+            img {
+                width: 80%;
+                // height: 100%;
+                opacity: .8;
+                border-radius: 5px;
+            }
+        }
+
+        .content-description {
+            display: flex;
+            justify-content: center;
+            p{
+                width: 100%;
+                font-size: large;
+            }
+        }
+    }
+}
 }
 </style>

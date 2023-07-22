@@ -1,46 +1,35 @@
 <template>
-  <nav>
+  <div class="container">
     <div class="left">
-      <span id="brandName">
+      <div class="logo">
         <RouterLink to="/">DEN</RouterLink>
-      </span>
-      <span>
-        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-        Search...
-      </span>
+      </div>
+      <div class="search">
+        <font-awesome-icon class="icon" icon="fa-solid fa-magnifying-glass" />
+        <input type="text" placeholder="Search...">
+      </div>
     </div>
 
     <div class="right">
       <div class="content">
-        <span>
+        <nav class="menu">
           <RouterLink to="/shopAll">Shop All</RouterLink>
-        </span>
-        <span>
           <RouterLink to="/women">Women</RouterLink>
-        </span>
-        <span>
           <RouterLink to="/men">Men</RouterLink>
-        </span>
-        <span>
           <RouterLink to="/sale">Sale</RouterLink>
-        </span>
-        <span>
           <RouterLink to="/about">About</RouterLink>
-        </span>
-        <span>
           <RouterLink to="/contact">Contact</RouterLink>
-        </span>
-      </div>
-      <div class="login-cart">
-        <span>
+        </nav>
+        <!-- </nav> -->
+        <!-- <nav class="login-cart"> -->
+        <nav class="account-cart">
           <RouterLink to="/login"><font-awesome-icon icon="fa-solid fa-user" /></RouterLink>
-        </span>
-        <span>
-          <RouterLink to="" id="cart" @click="store.state.sideBarState = true"><font-awesome-icon icon="fa-solid fa-bag-shopping" /></RouterLink>
-        </span>
+          <RouterLink to="" id="cart" @click="store.state.sideBarState = true"><font-awesome-icon
+              icon="fa-solid fa-bag-shopping" /></RouterLink>
+        </nav>
       </div>
     </div>
-  </nav>
+  </div>
 </template>
   
 <script setup>
@@ -49,90 +38,194 @@ import store from '../store';
 </script>
   
 <style lang="scss" scoped>
-nav {
+.container {
   width: 100%;
   height: 4rem;
-  background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  // position:sticky;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 
   .left {
-    width: 40%;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-    span {
-      margin-right: 1rem;
+    .logo {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+      }
     }
 
-    #brandName a {
-      color: white;
-      background-color: black;
-      padding: 0.5rem;
-      text-decoration: none;
-      // margin-left: 1rem;
+    .search {
+      width: 80%;
+      display: flex;
+      border-bottom: 1px solid black;
+
+      input {
+        border: none;
+        outline: none;
+        padding-left: .5rem;
+        background: transparent;
+      }
     }
+
   }
 
   .right {
-    width: 60%;
+    width: 70%;
     display: flex;
     gap: 1rem;
-    justify-content: flex-end;
-
-    div a {
-      text-decoration: none;
-      color: black;
-    }
-
-    :hover {
-      color: chocolate;
-    }
 
     .content {
-      span {
-        margin-right: 1rem;
-      }
-    }
+      width: 100%;
+      display: flex;
 
-    .login-cart {
-      span {
-        margin: 1rem;
+      .menu {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
 
-        #cart {
-          transition: 100s;
+        a {
+          color: black;
+          text-decoration: none;
         }
+      }
+
+      .account-cart {
+        width: 10%;
+        display: flex;
+        justify-content: end;
+
+        a {
+          display: flex;
+          justify-content: end;
+          width: 50%;
+          color: black;
+          text-decoration: none;
+        }
+
       }
     }
   }
 }
 
-svg {
-  width: 12px;
-}
-
 @media screen and (max-width: 500px) {
-  nav {
+  *{font-size: .8rem;}
+  .container {
     width: 100%;
-    background-color: aqua;
+    //4rem->3rem
+    height: 3rem;
     display: flex;
+    align-items: center;
+    //1rem -> .5rem
+    gap: .5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
 
     .left {
-      width: 40%;
+      height: 100%;
+      width: 30%;
+      display: flex;
+      align-items: center;
+      //1rem->.5rem
+      gap: .5rem;
 
-      span {
-        margin: 0;
+      .logo {
+        //20-30
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          color: white;
+          text-decoration: none;
+        }
       }
 
-      #brandName a {
-        margin: 0;
-        padding: 0;
+      .search {
+        //80-70
+        width: 70%;
+        display: flex;
+        border-bottom: 1px solid black;
+
+        input {
+          border: none;
+          outline: none;
+          padding-left: .5rem;
+          background: transparent;
+        }
       }
+
     }
 
     .right {
-      width: 60%;
-      // display: flex;
+      width: 70%;
+      display: flex;
+      gap: 1rem;
+
+      .content {
+        width: 100%;
+        display: flex;
+
+        .menu {
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          //1rem - 0
+          gap: .2rem;
+
+          a {
+            color: black;
+            text-decoration: none;
+            font-size: .8rem;
+          }
+        }
+
+        .account-cart {
+          width: 10%;
+          display: flex;
+          justify-content: end;
+          gap: .2rem;
+          a {
+            display: flex;
+            justify-content: end;
+            width: 50%;
+            color: black;
+            text-decoration: none;
+          }
+
+        }
+      }
     }
   }
 }
