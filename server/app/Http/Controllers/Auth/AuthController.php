@@ -63,4 +63,12 @@ class AuthController extends Controller
         //
     }
 
+    //create register
+    public function register()
+    {
+    }
+    //create login
+    public function login()
+    {
+    }
 }
