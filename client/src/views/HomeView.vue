@@ -4,8 +4,8 @@
             <section class="banner">
                 <div class="title">
                     <div class="text">
-                        <p>Free Shipping</p>
-                        <p>On Order Over $50 - Use Coupon Code Ovser50</p>
+                        <p class="p1">Free Shipping</p>
+                        <p class="p2">On Order Over $50 - Use Coupon Code Over50</p>
                     </div>
                     <div class="link">
                         <router-link to="/women">Shop Women</router-link>
@@ -24,67 +24,68 @@
                     <p>NEW ARRIVALS</p>
                     <div class="line"></div>
                 </div>
-                <div class="item">
-                    <div>
-                        <img src="../assets/image/homePage/t4.png" alt="t4">
+                <div class="items">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t4.png" alt="t1"></div>
                         <p>T1-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t5.png" alt="t5">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t5.png" alt="t2"></div>
                         <p>T2-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t6.png" alt="t6">
+                    <div class="item">
+                        <div class="img"><img src="../assets//image/homePage/t6.png" alt="t6"></div>
                         <p>T3-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t7.png" alt="t7">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t7.png" alt="t7"></div>
                         <p>T4-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t8.png" alt="t8">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t8.png" alt="t8"></div>
                         <p>T5-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t9.png" alt="t9">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t9.png" alt="t9"></div>
                         <p>T6-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t10.png" alt="t10">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t10.png" alt="t10"></div>
                         <p>T7-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t11.png" alt="t11">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t11.png" alt="t11"></div>
                         <p>T8-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t12.png" alt="t12">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t12.png" alt="t12"></div>
                         <p>T9-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t13.png" alt="t13">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t13.png" alt="t13"></div>
                         <p>T10-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t14.png" alt="t14">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t14.png" alt="t14"></div>
                         <p>T11-Shirt</p>
                         <p>$10</p>
                     </div>
-                    <div>
-                        <img src="../assets/image/homePage/t15.png" alt="t15">
+                    <div class="item">
+                        <div class="img"><img src="../assets/image/homePage/t15.png" alt="t15"></div>
                         <p>T12-Shirt</p>
                         <p>$10</p>
                     </div>
+
                 </div>
                 <div class="next">
                     <button>
@@ -101,8 +102,6 @@
 </template>
 
 <script setup>
-
-// import Product from './DetailProductView.vue'
 import mainLayout from '../layout/mainLayout.vue';
 
 </script>
@@ -114,12 +113,13 @@ import mainLayout from '../layout/mainLayout.vue';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // position: relative;
 
     .banner {
         width: 100%;
 
         .title {
-            height: 30vh;
+            height: 20vh;
             background-color: #ff6200;
 
             .text {
@@ -136,11 +136,11 @@ import mainLayout from '../layout/mainLayout.vue';
                     padding: 0;
                 }
 
-                p:first-child {
+                .p1 {
                     font-size: 60px;
                 }
 
-                p:nth-child(2) {
+                .p2 {
                     font-size: 30px;
                 }
             }
@@ -217,26 +217,36 @@ import mainLayout from '../layout/mainLayout.vue';
             }
         }
 
-        .item {
+        .items {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            margin-top: 1rem;
-            grid-gap: 1rem;
+            margin-top: 3rem;
+            gap: 1rem;
 
-            div {
+            .item {
+                width: 100%;
+                background-color: #585858;
 
-                // width: 100%;
-                img {
+                .img {
                     width: 100%;
-                    // height: 90%;
-                }
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
 
-                p:nth-child(3) {
-                    color: #ff6200;
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 p {
                     height: 5%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                }
+
+                p:nth-child(3) {
+                    color: #cc4e00;
                 }
             }
         }
@@ -244,7 +254,7 @@ import mainLayout from '../layout/mainLayout.vue';
         .next {
             display: flex;
             justify-content: center;
-            gap: 0.1rem;
+            gap: 1rem;
             margin-top: 2rem;
 
             button {
@@ -281,6 +291,196 @@ import mainLayout from '../layout/mainLayout.vue';
             button:nth-child(2):hover {
                 border: 5px solid #ffb180;
                 background-color: #ffb180;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        height: 100%;
+
+        .banner {
+            width: 100%;
+            height: 30vh;
+
+            // background-color: #625e5e;
+            .title {
+                height: 50%;
+                width: 100%;
+                // background-color: #ff6200;
+
+                .text {
+                    height: 50%;
+                    width: 100%;
+
+                    // background-color: #625e5e;
+                    .p1 {
+                        font-size: 2rem;
+                    }
+
+                    .p2 {
+                        font-size: .7rem;
+                        // padding-top: 5px;
+                    }
+                }
+
+                .link {
+                    height: 50%;
+                    width: 100%;
+                    // display: flex;
+                    justify-content: space-around;
+                    // align-items: center;
+                    // gap: 1rem;
+
+                    a {
+                        // text-decoration: none;
+                        // color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                        padding: .5rem;
+                        font-size: .7rem;
+
+                    }
+
+                    a:hover {
+
+                        color: #ff6200;
+                        background-color: #ffffff;
+
+                    }
+                }
+            }
+
+            .model {
+                height: 50%;
+                // background-color: aquamarine;
+                // background-color: aqua;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+                margin: 0;
+                gap: 1rem;
+
+                div {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        // height: 100%;
+                    }
+                }
+            }
+        }
+
+        .new-arrival {
+            width: 100%;
+            height: 100%;
+
+            // margin-top: 1rem;
+            .content {
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+                // height: fit-content;
+                // position: relative;
+                margin-top: 2rem;
+
+                p {
+                    font-size: 3rem;
+                    // text-align: center;
+                    // margin: 0;
+                    // line-height: .6;
+                    // z-index: 10;
+                    // font-family: 'Koulen', cursive;
+                }
+
+                .line {
+                    // height: 5px;
+                    width: 15rem;
+                    // background-color: #ff6200;
+                    // position: absolute;
+                    // bottom: 0;
+                }
+            }
+            .items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 3rem;
+            gap: 1rem;
+
+            .item {
+                width: 100%;
+                background-color: #585858;
+
+                .img {
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    height: 15%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                }
+
+                p:nth-child(3) {
+                    color: #cc4e00;
+                }
+            }
+        }
+            .next {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+
+                button {
+                    border: 5px solid #ff6200;
+
+                    a {
+                        text-decoration: none;
+                        color: #ff6200;
+                    }
+                }
+
+                :first-child {
+                    width: 7rem;
+                    height: 2.2rem;
+                }
+
+                button:nth-child(1):hover {
+                    background-color: #ff6200;
+
+                    a {
+                        color: white;
+                    }
+                }
+
+                button:nth-child(2) {
+                    background-color: #ff6200;
+
+                    a {
+                        color: white;
+                        font-size: 1rem;
+                    }
+                }
+
+                button:nth-child(2):hover {
+                    border: 5px solid #ffb180;
+                    background-color: #ffb180;
+                }
             }
         }
     }

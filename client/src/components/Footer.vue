@@ -97,4 +97,10 @@
             height: 16px;
         }
     }
-}</style>
+}
+@media only screen and (max-width: 1000px){
+    .section1{
+        height: 10rem;
+    }
+}
+</style>

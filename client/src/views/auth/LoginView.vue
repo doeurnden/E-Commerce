@@ -34,15 +34,10 @@ export default{
 </script>
 
 <style lang="scss" scoped>
-// *{
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+
 .container {
     width: 87rem;
     height: 47rem;
-    // height: 100%;
     display: flex;
     color: white;
     background-color: rgb(0, 0, 0);
@@ -58,8 +53,6 @@ export default{
         justify-content: center;
         align-items: center;
         border-right: 5px solid white;
-        // background-color: #eeeeee;
-        // background-color: aqua;
         img {
             // width: 100%;
             height: 100%;
@@ -132,57 +125,62 @@ export default{
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 500px){
+    body{
+        margin: 0 1rem;
+    }
     .container {
         display: flex;
         flex-direction: column;
         height: 100%;
         width: 100%;
-        .img{
+
+        .img {
             width: 100%;
             height: 50%;
             border-bottom: 5px solid white;
             border-right: none;
-            img{
+            img {
                 // height: 100%;
-                width:100%;
+                width: 100%;
             }
         }
-        .form{
+
+        .form {
             width: 100%;
             height: 50%;
-            display: flex;
+            // display: block;
             border-top: 5px solid white;
             border-left: none;
-            form{
+
+            form {
                 width: 100%;
-                height: 100%;
-                h2{ 
+
+                // height: 100%;
+                h2 {
+                    margin-top: 1rem;
                     text-align: center;
-                    padding-bottom: 15%;
                 }
-                div{
-                    padding: 0;
-                    margin: 0;
-                    input{
+
+                div {
+                    input {
                         width: 90%;
                         margin: 0 5%;
                         padding: .5rem;
-                        // margin:  1rem;
                     }
                 }
-                .btn{
+
+                .btn {
                     text-align: center;
                     margin-top: 1rem;
-                    // padding-top: 10%;
-                    button{
+
+                    button {
                         width: 4rem;
                         height: 1.5rem;
                         border: none;
                         border-radius: .2rem;
                         color: rgb(0, 0, 0);
                         background-color: rgb(255, 255, 255);
-
                     }
                 }
             }

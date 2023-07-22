@@ -104,7 +104,7 @@ import mainLayout from '../layout/mainLayout.vue';
 
 <style lang="scss" scoped>
 main{
-    min-height: 80vh;
+    // min-height: 80vh;
     header{
         display: flex;
         flex-direction: column;
