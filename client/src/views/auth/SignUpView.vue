@@ -4,21 +4,21 @@
             <img src="../../assets/image/den.png" alt="den">
         </div>
         <div class="form">
-            <form>
+            <form @submit.prevent="saveData">
                 <h2>Sign Up</h2>
                 <div>
-                    <input type="text" placeholder="username" required>
+                    <input type="text" v-model="username" placeholder="username" required>
                 </div>
                 <div>
-                    <input type="email" placeholder="email" required>
+                    <input type="email" v-model="email" placeholder="email" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="password" required>
+                    <input type="password" v-model="password" placeholder="password" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="repeat password" required>
+                    <input type="password" v-model="confirm_password" placeholder="confirm password" required>
                 </div>
-                <div class="btn"><button><b>Sign up</b></button></div>
+                <div class="btn"><input type="submit" value="SignUp" class="button"></div>
                 <div style="text-align: center; 
                 ">Already have an account? <router-link to="login" style="text-decoration: none; color: coral;">Log in</router-link></div>
             </form>
@@ -27,7 +27,21 @@
 </template>
 
 <script>
+export default{
+    data(){
+        return{
+            username: '',
+            email: '',
+            password: '',
+            confirm_password: ''
+        }
+    },
+    methods:{
+        saveData(){
 
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -92,16 +106,24 @@
                 display: flex;
                 justify-content: center;
 
-                button {
+                .button {
                     width: 5rem;
                     height: 2rem;
+                    color: white;
+                    background-color: #ef3e0a;
+                    border: none;
+                    border-radius: 5px;
+                    transition: transform 0.5s opacity 0.5s background-color 0.5s ease;
+                }:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1000px) {
     .container {
         width: 45rem;
         height: 28rem;
@@ -128,7 +150,7 @@
                     display: flex;
                     justify-content: center;
 
-                    button {
+                    .button {
                         width: 4.5rem;
                         height: 2rem;
                     }
@@ -184,7 +206,7 @@
                     text-align: center;
                     margin-top: 1rem;
 
-                    button {
+                    .button {
                         width: 4rem;
                         height: 1.5rem;
                         border: none;

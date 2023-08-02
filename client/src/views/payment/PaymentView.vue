@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="btn">
-                        <input type="submit" value="play">
+                        <input type="submit" value="pay">
                     </div>
                 </form>
             </div>

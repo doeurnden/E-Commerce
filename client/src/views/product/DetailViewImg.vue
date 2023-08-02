@@ -49,7 +49,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            .custom-icon{
+
+            .custom-icon {
                 font-size: 36px;
             }
         }
@@ -66,7 +67,8 @@
             }
         }
     }
-    .flex-element{
+
+    .flex-element {
         width: 100%;
         height: 10%;
         display: flex;
@@ -74,7 +76,8 @@
         align-items: center;
         // background-color: antiquewhite;
         gap: 1rem;
-        .circle-flex{
+
+        .circle-flex {
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
@@ -99,5 +102,4 @@
             }
         }
     }
-}
-</style>
+}</style>

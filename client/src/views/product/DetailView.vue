@@ -2,19 +2,13 @@
     <mainLayout>
         <div class="container">
             <main class="navbar-link">
-                <div>
+                <div class="nav">
                     <h3>Home / T1</h3>
                 </div>
                 <div class="prev-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 16px;">
-                        <path
-                            d="M380.6 81.7c7.9 15.8 1.5 35-14.3 42.9L103.6 256 366.3 387.4c15.8 7.9 22.2 27.1 14.3 42.9s-27.1 22.2-42.9 14.3l-320-160C6.8 279.2 0 268.1 0 256s6.8-23.2 17.7-28.6l320-160c15.8-7.9 35-1.5 42.9 14.3z" />
-                    </svg>
+                    <font-awesome-icon class="custom-icon" icon="fa-solid fa-chevron-left" />
                     <h3>Prev | Next</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 16px;">
-                        <path
-                            d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z" />
-                    </svg>
+                    <font-awesome-icon class="custom-icon" icon="fa-solid fa-chevron-right" />
                 </div>
             </main>
             <main class="detail-product-info">
@@ -22,34 +16,35 @@
                     <div class="image">
                         <img src="../../assets/image/homePage/t5.png" alt="t5">
                     </div>
-                    <div class="rotation" style="display: flex; gap: .5rem;">
+                    <div class="rotation">
                         <div style="width: 3rem; height: 3rem; background-color: aqua;"></div>
                         <div style="width: 3rem; height: 3rem; background-color: rgb(0, 0, 0);"></div>
                     </div>
-                    <div>
-                        <p>Make in Thailand</p>
+                    <div class="discription">
+                        <p>Make in Cambodia</p>
                     </div>
                 </div>
                 <div class="product-info">
+                    
                     <div class="title-cost">
-                        <h3>T1-Shirt</h3>
-                        <h4>$10.00</h4>
+                        <h2>T1-Shirt</h2>
+                        <p>$10.00</p>
                     </div>
                     <div class="form">
-                        <form action="#">
+                        <form>
                             <div class="color-product">
                                 <p>Color</p>
                                 <div class="color">
-                                    <div style="width: 20px;height: 20px; background-color: bisque;"></div>
-                                    <div style="width: 20px;height: 20px; background-color: rgb(94, 93, 93);"></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
                             </div>
                             <div class="size-guide">
                                 <div class="size">
-                                    <span>size</span>
-                                    <span>check size</span>
+                                    <div>size</div>
+                                    <div>check size</div>
                                 </div>
-                                <select style="width: 5rem; height: 2rem;">
+                                <select class="setection">
                                     <option value="" selected disabled hidden>Select</option>
                                     <option value="1">XS</option>
                                     <option value="2">S</option>
@@ -61,10 +56,10 @@
                                 <p>Qty</p>
                                 <input type="number">
                             </div>
+                            <div class="btn">
+                                <button>Add to Cart</button>
+                            </div>
                         </form>
-                        <div>
-                            <button>Add to Cart</button>
-                        </div>
                     </div>
                 </div>
             </main>
@@ -104,38 +99,164 @@ import mainLayout from '../../layout/mainLayout.vue';
 
 <style lang="scss" scoped>
 .container {
+    height: 100%;
+    width: 100%;
+
     .navbar-link {
+        height: 10vh;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+
+        .nav {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .prev-next {
+            width: 50%;
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 1rem;
         }
     }
 
     .detail-product-info {
+        height: 70vh;
+        // background-color: antiquewhite;
         display: flex;
-        justify-content: space-around;
+        // justify-content: space-around;
 
         .image-rotation {
-            .rotation {
+            height: 100%;
+            width: 50%;
+
+            .image {
+                height: 80%;
+                width: 100%;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 100%;
+                    // width: 80%;
+                }
+            }
+
+            .rotation {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: start;
+                gap: 1rem;
+                align-items: center;
+                padding-left: 10%;
+            }
+
+            .discription {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding-left: 10%;
             }
         }
 
         .product-info {
+            height: 100%;
+            width: 50%;
+
+            .title-cost {
+                height: 15%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .form {
-                .color-product {
-                    .color {
+                height: 85%;
+                width: 100%;
+
+                form {
+                    height: 100%;
+                    width: 100%;
+
+                    .color-product {
                         display: flex;
-                        gap: 1rem;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 10%;
+
+                        .color {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            div {
+                                width: 20px;
+                                height: 20px;
+                                background-color: aquamarine;
+                            }
+                        }
                     }
 
                     .size-guide {
+                        height: 15%;
+                        width: 100%;
+                        // background-color: aquamarine;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
                         .size {
-                            display: inline-block;
-                            color: antiquewhite;
+                            width: 50%;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        .setection {
+                            width: 50%;
+                            height: 2rem;
+                            border-radius: 5PX;
+                            border: 2px solid rgb(255, 115, 0);
+                            padding: 0 1rem;
+                        }
+                    }
+
+                    .qty {
+                        height: 15%;
+                        width: 100%;
+                        // background-color: rgb(91, 169, 208);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        input {
+                            width: 50%;
+                            height: 2rem;
+                            border-radius: 5PX;
+                            border: 2px solid rgb(255, 115, 0);
+                            padding-left: 1rem;
+                        }
+                    }
+
+                    .btn {
+                        height: 10%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        button {
+                            height: 2rem;
+                            border-radius: 5PX;
+                            border: 2px solid rgb(255, 115, 0);
+                            padding: 0 1rem;
+                        }:hover{
+                            cursor: pointer;
                         }
                     }
                 }
