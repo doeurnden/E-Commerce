@@ -49,25 +49,20 @@ const router = createRouter({
       name: 'signup',
       component: () => import('../views/auth/SignUpView.vue')
     },
-    // {
-    //   path: '/cart',
-    //   name: 'cart',
-    //   component: () => import('../views/CartView.vue')
-    // },
     {
       path: '/product-detail',
       name: 'product-detaile',
-      component: () => import('../views/product/DetailProductView.vue')
+      component: () => import('../views/product/DetailView.vue')
     },
     {
-      path: '/product-detail-img',
-      name: 'product-detaile-img',
-      component: () => import('../views/product/DetailProductViewImg.vue')
+      path: '/product-img',
+      name: 'product-img',
+      component: () => import('../views/product/DetailViewImg.vue')
     },
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../views/dashboard/Admin-dashboard.vue')
+      component: () => import('../views/dashboard/AdminDashboard.vue')
     },
     {
       path: '/cart-view-detail',
@@ -77,7 +72,7 @@ const router = createRouter({
     {
       path: '/payment',
       name: 'payment',
-      component: () => import('../views/payment/paymentMethodView.vue')
+      component: () => import('../views/payment/PaymentView.vue')
     }
     
   ]

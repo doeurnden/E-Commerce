@@ -24,6 +24,10 @@
                     <p>NEW ARRIVALS</p>
                     <div class="line"></div>
                 </div>
+                <div class="item-filter">
+                    <div>New (12 item )</div>
+                    <div class="filter"><font-awesome-icon class="icon" icon="filter" /> filter</div>
+                </div>
                 <div class="items">
                     <div class="item">
                         <div class="img"><img src="../assets/image/homePage/t4.png" alt="t1"></div>
@@ -88,12 +92,10 @@
 
                 </div>
                 <div class="next">
-                    <button>
-                        <router-link to="/shopAll">Shop All</router-link>
-                    </button>
-                    <button>
-                        <router-link to="/shopAll">></router-link>
-                    </button>
+                    <router-link class="direction" to="/shopAll">
+                        <div class="shop-all">Shop All</div>
+                        <div class="next-shop">></div>
+                    </router-link>
                 </div>
             </section>
         </div>
@@ -217,15 +219,31 @@ import mainLayout from '../layout/mainLayout.vue';
             }
         }
 
+        .item-filter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+
+            .filter {
+                border: 1px solid black;
+                padding: .5rem 1rem;
+                border-radius: 5px;
+                background: transparent;
+
+                .icon {}
+            }
+        }
+
         .items {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            margin-top: 3rem;
+            margin-top: 1rem;
             gap: 1rem;
 
             .item {
                 width: 100%;
-                background-color: #585858;
+                // background-color: #585858;
 
                 .img {
                     width: 100%;
@@ -235,6 +253,15 @@ import mainLayout from '../layout/mainLayout.vue';
 
                     img {
                         width: 100%;
+                        transition: transform 0.3s;
+                    }
+
+                    img:hover {
+                        /* Your styles for the image on hover go here */
+                        transform: scale(1.01);
+                        border-color: #f00;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        cursor: pointer;
                     }
                 }
 
@@ -254,43 +281,185 @@ import mainLayout from '../layout/mainLayout.vue';
         .next {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            align-items: center;
             margin-top: 2rem;
 
-            button {
-                border: 5px solid #ff6200;
+            .direction {
+                display: flex;
+                gap: 1rem;
+                text-decoration: none;
 
-                a {
-                    text-decoration: none;
+                .shop-all,.next-shop{
+                    border: 5px solid #ff6200;
+                    background-color: white;
                     color: #ff6200;
+                    border-radius: 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
-            }
+                .shop-all {
+                    padding: .5rem 2rem;
+                }
 
-            :first-child {
-                width: 7rem;
-                height: 2.2rem;
-            }
+                .next-shop {
+                    padding: .5rem .5rem;
+                }
 
-            button:nth-child(1):hover {
-                background-color: #ff6200;
-
-                a {
+                :hover {
+                    background-color: #ff6200;
                     color: white;
                 }
             }
+        }
+    }
+}
 
-            button:nth-child(2) {
+@media only screen and (max-width: 1000px) {
+    .container {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        // position: relative;
+
+        .banner {
+            width: 100%;
+
+            .title {
+                height: 20vh;
                 background-color: #ff6200;
 
-                a {
+                .text {
+                    height: 50%;
                     color: white;
-                    font-size: 1rem;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .p1 {
+                        font-size: 60px;
+                    }
+
+                    .p2 {
+                        font-size: 30px;
+                    }
+                }
+
+                .link {
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4rem;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        border: 2px solid white;
+                        padding: 1rem 3rem;
+                        font-size: 20px;
+
+                    }
+
+                    a:hover {
+
+                        color: #ff6200;
+                        background-color: #ffffff;
+
+                    }
                 }
             }
 
-            button:nth-child(2):hover {
-                border: 5px solid #ffb180;
-                background-color: #ffb180;
+            .model {
+                // height: 60vh;
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem 0;
+                gap: 1rem;
+
+                div {
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .new-arrival {
+
+            // margin-top: 1rem;
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: fit-content;
+                position: relative;
+                margin-top: 4rem;
+
+                p {
+                    font-size: 4rem;
+                    text-align: center;
+                    margin: 0;
+                    line-height: .6;
+                    z-index: 10;
+                    font-family: 'Koulen', cursive;
+                }
+
+                .line {
+                    height: 5px;
+                    width: 20rem;
+                    background-color: #ff6200;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            .items {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                margin-top: 3rem;
+                gap: 1rem;
+
+                .item {
+                    width: 100%;
+                    // background-color: #585858;
+
+                    .img {
+                        width: 100%;
+                        height: 80%;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        height: 10%;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+
+                    p:nth-child(3) {
+                        color: #cc4e00;
+                    }
+                }
+            }
+
+            .next {
+
             }
         }
     }
@@ -407,80 +576,97 @@ import mainLayout from '../layout/mainLayout.vue';
                     // bottom: 0;
                 }
             }
-            .items {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: 3rem;
-            gap: 1rem;
 
-            .item {
-                width: 100%;
-                background-color: #585858;
-
-                .img {
-                    width: 100%;
-                    height: 70%;
-                    display: flex;
-                    justify-content: center;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                p {
-                    height: 15%;
-                    display: flex;
-                    justify-content: start;
-                    align-items: center;
-                }
-
-                p:nth-child(3) {
-                    color: #cc4e00;
-                }
-            }
-        }
-            .next {
+            .item-filter {
                 display: flex;
-                justify-content: center;
-                gap: 1rem;
+                justify-content: space-between;
+                align-items: center;
                 margin-top: 2rem;
 
-                button {
+                .filter {
+                    border-bottom: 1 px solid black;
+                    // border: 1px solid black;
+                    padding: .1rem .25rem;
+                    border-radius: 5px;
+                    background: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {}
+                }
+            }
+
+
+            .items {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                margin-top: .5rem;
+                gap: 1rem;
+
+                .item {
+                    width: 100%;
+                    // background-color: #585858;
+
+                    .img {
+                        width: 100%;
+                        height: 70%;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        height: 15%;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+
+                    p:nth-child(3) {
+                        color: #cc4e00;
+                    }
+                }
+            }
+
+            .next {
+                display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+
+            .direction {
+                display: flex;
+                gap: 1rem;
+                text-decoration: none;
+
+                .shop-all,.next-shop{
                     border: 5px solid #ff6200;
-
-                    a {
-                        text-decoration: none;
-                        color: #ff6200;
-                    }
+                    background-color: white;
+                    color: #ff6200;
+                    border-radius: 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .shop-all {
+                    // width: 9rem;
+                    height: 100%;
                 }
 
-                :first-child {
-                    width: 7rem;
-                    height: 2.2rem;
+                .next-shop {
+                    // width: 1rem;
+                    height: 100%;
                 }
 
-                button:nth-child(1):hover {
+                :hover {
                     background-color: #ff6200;
-
-                    a {
-                        color: white;
-                    }
+                    color: white;
                 }
-
-                button:nth-child(2) {
-                    background-color: #ff6200;
-
-                    a {
-                        color: white;
-                        font-size: 1rem;
-                    }
-                }
-
-                button:nth-child(2):hover {
-                    border: 5px solid #ffb180;
-                    background-color: #ffb180;
-                }
+            }
             }
         }
     }

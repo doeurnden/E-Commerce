@@ -8,11 +8,11 @@
                 <h2>Login</h2>
                 <div>
                     <!-- <label for="email">Email</label><br> -->
-                    <input type="email" placeholder="email" required>
+                    <input type="email" v-model="email" placeholder="email" required>
                 </div>
                 <div>
                     <!-- <label for="pws">Password</label><br> -->
-                    <input type="password" placeholder="password" required>
+                    <input type="password" v-model="password" placeholder="password" required>
                 </div>
                 <div class="btn"><button><b>Log in</b></button></div>
                 <p>Don't have an account ? <router-link to="signup" style="text-decoration: none; color: coral;">Sign up</router-link></p>
@@ -27,6 +27,11 @@ export default{
         return{
             email: '',
             password: ''
+        }
+    },
+    methods:{
+        login(){
+            
         }
     }
 }

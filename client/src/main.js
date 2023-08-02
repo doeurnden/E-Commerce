@@ -40,6 +40,30 @@ import { faStoreAlt } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+//dashboard
+import { faTableCellsLarge } from '@fortawesome/free-solid-svg-icons';
+//setting
+import { faGear } from '@fortawesome/free-solid-svg-icons';
+//Logout
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+//statistic
+import { faSignal } from '@fortawesome/free-solid-svg-icons';
+//payment
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+//transaction
+import { faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+//product
+import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
+//customer
+import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
+//message
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+//list
+import { faList } from '@fortawesome/free-solid-svg-icons';
+//filter
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
+
+
 /* add icons to the library */
 library.add(
     faTwitter,
@@ -56,7 +80,18 @@ library.add(
     faCopyright,
     faStoreAlt,
     faCaretDown,
-    faChevronDown
+    faChevronDown,
+    faTableCellsLarge,
+    faGear,
+    faArrowRight,
+    faSignal,
+    faDollarSign,
+    faMoneyBill,
+    faBoxOpen,
+    faUserGroup,
+    faEnvelope,
+    faList,
+    faFilter
 )
 
 app.use(router)
